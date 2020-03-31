@@ -15,4 +15,35 @@
 
 .about-cards {
   height: 40vh;
+  width: 90%;
+  @include flex(column, center, center);
+  margin: 3rem 0rem;
+}
+
+.about-cards-image {
+  width: 100%;
+  height: 60%;
+
+  flex: 1 1 10rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-cards-description {
+  height: 40%;
+  width: 100%;
+  padding-top: 1.5rem;
+  flex: 1 1 10rem;
+
+  p {
+    font-size: var(--text);
+  }
+  span {
+    font-size: var(--text);
+    font-weight: bold;
+  }
 }
