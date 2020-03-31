@@ -1,0 +1,45 @@
+// Global Settings
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  --header1: calc(3rem + 1vw);
+  --header2: calc(2rem + 1vw);
+  --header3: calc(1.5rem + 1vw);
+  --hedaer4: calc(1rem + 1vw);
+  --text: calc(0.5rem + 1vw);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: var(--text);
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: var(--header1);
+}
+h2 {
+  font-size: var(--header2);
+}
+h3 {
+  font-size: var(--header3);
+}
+
+p {
+  font-size: var(--text);
+}

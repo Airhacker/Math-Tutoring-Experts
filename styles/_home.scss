@@ -1,0 +1,130 @@
+// Home Nav
+
+.home-header {
+  background: white;
+  min-height: 10vh;
+  @include flex(row, center, center);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25),
+    0px 5px 15px rgba(0, 0, 0, 0.25);
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.home-logo {
+  flex: 1 1 20rem;
+  padding: 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.menu-right {
+  flex: 1 1 20rem;
+  @include flex(row, center, flex-end);
+}
+
+// Burger Menu
+
+.burger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin: 1rem;
+
+  span {
+    padding: 0.2rem 2rem;
+    background: $special-color;
+    margin: 0.5rem 0rem;
+    display: block;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+  }
+}
+.nav-links {
+  width: 100%;
+  height: 100%;
+  background: $special-color;
+  position: fixed;
+  top: 0%;
+  left: 100%;
+  transition: transform 1s ease;
+
+  @include flex(column, center, space-evenly);
+
+  a {
+    font-size: var(--header3);
+    font-weight: bold;
+    color: whitesmoke;
+    transition: all 0.1s linear;
+
+    &:hover {
+      border-bottom: 5px solid whitesmoke;
+    }
+  }
+}
+
+.nav-open {
+  transform: translateX(-100%);
+}
+
+.toggle .line1 {
+  transform: rotateZ(45deg) translateY(300%);
+  background: whitesmoke;
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotateZ(-45deg) translateY(-300%);
+  background: whitesmoke;
+}
+
+// Main Section
+
+.home-main {
+  min-height: 50vh;
+  width: 90%;
+  margin: auto;
+  margin-top: 6rem;
+}
+
+.home-hero-section {
+  @include flex(row, center, center);
+}
+
+.home-description {
+  @include flex(column, flex-start, center);
+  height: 100%;
+  margin: 3rem;
+
+  h1 {
+    margin: 2rem 0rem;
+  }
+}
+
+// Footer
+
+.home-footer {
+  min-height: 20vh;
+  @include flex(column, center, center);
+}
+
+.assessment-btn {
+  border: none;
+  border-radius: 15px;
+  background: $special-color;
+  padding: 1.5rem;
+  color: whitesmoke;
+  font-size: var(--header3);
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.arrow {
+  width: 50px;
+}

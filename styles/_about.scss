@@ -1,0 +1,18 @@
+// About Page
+
+#about-page {
+  width: 90%;
+  margin: auto;
+
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+
+  h2 {
+    margin: 1.5rem;
+    text-align: center;
+  }
+}
+
+.about-cards {
+  height: 40vh;
+}

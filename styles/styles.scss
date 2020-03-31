@@ -1,0 +1,16 @@
+// Variables
+$main-color: #b80f0a;
+$special-color: #1865f2;
+
+//Mixins
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Imports
+@import "global";
+@import "home";
+@import "about";
