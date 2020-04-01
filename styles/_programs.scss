@@ -1,0 +1,24 @@
+// Programs Page
+
+#programs-page {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+
+  @include flex(column, center, center);
+}
+
+.program-container {
+  @include flex(row, center, center);
+  width: 100%;
+  margin: 1.5rem;
+}
+
+.program-image {
+  flex: 1 1 10rem;
+}
+
+.program-description {
+  flex: 1 1 10rem;
+  text-align: center;
+}
