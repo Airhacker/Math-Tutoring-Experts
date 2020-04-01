@@ -1,5 +1,5 @@
 // Variables
-$main-color: #b80f0a;
+$main-color: rgb(184, 16, 10);
 $special-color: #1865f2;
 
 //Mixins
@@ -15,3 +15,5 @@ $special-color: #1865f2;
 @import "home";
 @import "about";
 @import "programs";
+@import "coupons";
+@import "contact";

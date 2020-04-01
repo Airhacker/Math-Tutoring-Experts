@@ -1,0 +1,34 @@
+// Coupons Page
+
+#coupons-page {
+  width: 90%;
+  margin: 2rem auto;
+
+  @include flex(column, center, center);
+}
+
+.coupon-container {
+  @include flex(column, center, center);
+  width: 100%;
+  height: 20vh;
+  margin: 2rem 0rem;
+}
+
+.coupon-description {
+  @include flex(row, center, center);
+  flex: 1 1 30rem;
+  width: 100%;
+  text-align: center;
+  background: rgba(184, 16, 10, 0.8);
+  color: whitesmoke;
+}
+
+.coupon-terms {
+  @include flex(row, center, center);
+  flex: 1 1 30rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background: whitesmoke;
+  font-size: var(--text);
+}
