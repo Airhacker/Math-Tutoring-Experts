@@ -463,4 +463,129 @@ p {
   background: whitesmoke;
   font-size: var(--text);
 }
+
+#contact-page {
+  width: 90%;
+  margin: auto;
+}
+
+#contact-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-info p {
+  padding: 1rem;
+}
+
+.contact-info svg {
+  margin: 1rem 0rem;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-form form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-form form input {
+  padding: 1rem 2rem;
+  margin: 0.5rem 0rem;
+  border: none;
+  border-bottom: 2px solid #b8100a;
+  text-align: left;
+}
+
+.contact-form form p {
+  margin: 0.5rem 0rem;
+}
+
+.contact-form form label {
+  margin: 0.5rem 0rem;
+}
+
+.contact-form form select {
+  padding: 1rem 3rem;
+  margin: 0.5rem 0rem;
+  border: none;
+  border-bottom: 2px solid #b8100a;
+}
+
+.contact-form form textarea {
+  margin: 0.5rem 0rem;
+  border: none;
+  padding: 1rem 0rem;
+  border-bottom: 2px solid #b8100a;
+}
+
+#submit {
+  border: none;
+  background: #1865f2;
+  border-radius: 15px;
+  padding: 1.5rem 3rem;
+  margin: 1rem;
+  color: whitesmoke;
+  font-size: var(--text);
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
 /*# sourceMappingURL=styles.css.map */

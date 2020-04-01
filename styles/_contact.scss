@@ -1,0 +1,76 @@
+// Contact Page
+
+#contact-page {
+  width: 90%;
+  margin: auto;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-container {
+  @include flex(column, center, center);
+}
+
+.contact-info {
+  @include flex(column, center, center);
+
+  p {
+    padding: 1rem;
+  }
+
+  svg {
+    margin: 1rem 0rem;
+  }
+}
+
+.contact-form {
+  @include flex(column, center, center);
+
+  form {
+    width: 100%;
+    @include flex(column, center, center);
+
+    input {
+      padding: 1rem 2rem;
+      margin: 0.5rem 0rem;
+      border: none;
+      border-bottom: 2px solid $main-color;
+      text-align: left;
+    }
+    p {
+      margin: 0.5rem 0rem;
+    }
+
+    label {
+      margin: 0.5rem 0rem;
+    }
+    select {
+      padding: 1rem 3rem;
+      margin: 0.5rem 0rem;
+      border: none;
+      border-bottom: 2px solid $main-color;
+    }
+
+    textarea {
+      margin: 0.5rem 0rem;
+      border: none;
+      padding: 1rem 0rem;
+      border-bottom: 2px solid $main-color;
+    }
+  }
+}
+
+#submit {
+  border: none;
+  background: $special-color;
+  border-radius: 15px;
+  padding: 1.5rem 3rem;
+  margin: 1rem;
+  color: whitesmoke;
+  font-size: var(--text);
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
