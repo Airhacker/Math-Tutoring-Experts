@@ -6,6 +6,10 @@
   text-align: center;
 
   @include flex(column, center, center);
+
+  h2 {
+    margin-bottom: 1rem;
+  }
 }
 
 .program-container {

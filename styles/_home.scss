@@ -80,12 +80,23 @@
 
 // Main Section
 
-// Svg curve
-#curve {
-  position: absolute;
+// Box Image
 
-  bottom: 40%;
-  z-index: -2;
+.box-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+// Space Image
+.space-image {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  display: none;
+  svg {
+  }
 }
 
 .home-main {
@@ -93,6 +104,8 @@
   width: 90%;
   margin: auto;
   margin-top: 3rem;
+
+  position: relative;
 }
 
 .home-hero-section {
@@ -106,24 +119,6 @@
 
   h1 {
     margin: 2rem 0rem;
-  }
-}
-
-.home-image {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-
-  @include flex(row, center, flex-end);
-  overflow: hidden;
-
-  bottom: 40%;
-  img {
-    position: relative;
-    opacity: 1;
-    width: 70%;
-    height: 70%;
-    right: -20%;
   }
 }
 
@@ -147,4 +142,34 @@
 
 .arrow {
   width: 50px;
+}
+
+// Head Animations
+#head {
+  animation: boxAnimation 1s linear alternate infinite;
+}
+
+@keyframes boxAnimation {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(8px);
+  }
+}
+
+// Pencil Animations
+
+#pencil {
+  animation: pencilAnimation 0.5s linear alternate infinite;
+  transform-origin: 40% 60%;
+}
+
+@keyframes pencilAnimation {
+  from {
+    transform: rotateZ(5deg);
+  }
+  to {
+    transform: rotateZ(-5deg);
+  }
 }

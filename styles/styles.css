@@ -171,10 +171,18 @@ p {
   background: whitesmoke;
 }
 
-#curve {
+.box-image {
   position: absolute;
-  bottom: 40%;
-  z-index: -2;
+  bottom: 0;
+  right: 0;
+}
+
+.space-image {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  display: none;
 }
 
 .home-main {
@@ -182,6 +190,7 @@ p {
   width: 90%;
   margin: auto;
   margin-top: 3rem;
+  position: relative;
 }
 
 .home-hero-section {
@@ -222,35 +231,6 @@ p {
   margin: 2rem 0rem;
 }
 
-.home-image {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  overflow: hidden;
-  bottom: 40%;
-}
-
-.home-image img {
-  position: relative;
-  opacity: 1;
-  width: 70%;
-  height: 70%;
-  right: -20%;
-}
-
 .home-footer {
   min-height: 20vh;
   display: -webkit-box;
@@ -283,6 +263,62 @@ p {
   width: 50px;
 }
 
+#head {
+  -webkit-animation: boxAnimation 1s linear alternate infinite;
+          animation: boxAnimation 1s linear alternate infinite;
+}
+
+@-webkit-keyframes boxAnimation {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+}
+
+@keyframes boxAnimation {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+}
+
+#pencil {
+  -webkit-animation: pencilAnimation 0.5s linear alternate infinite;
+          animation: pencilAnimation 0.5s linear alternate infinite;
+  -webkit-transform-origin: 40% 60%;
+          transform-origin: 40% 60%;
+}
+
+@-webkit-keyframes pencilAnimation {
+  from {
+    -webkit-transform: rotateZ(5deg);
+            transform: rotateZ(5deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-5deg);
+            transform: rotateZ(-5deg);
+  }
+}
+
+@keyframes pencilAnimation {
+  from {
+    -webkit-transform: rotateZ(5deg);
+            transform: rotateZ(5deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-5deg);
+            transform: rotateZ(-5deg);
+  }
+}
+
 #about-page {
   width: 90%;
   margin: auto;
@@ -304,7 +340,7 @@ p {
 }
 
 #about-page h2 {
-  margin: 1.5rem;
+  margin: 1.5rem 0rem;
   text-align: center;
 }
 
@@ -324,12 +360,12 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 3rem 0rem;
+  margin: 2rem 0rem;
 }
 
 .about-cards-image {
   width: 100%;
-  height: 60%;
+  height: 80%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 10rem;
           flex: 1 1 10rem;
@@ -377,6 +413,10 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#programs-page h2 {
+  margin-bottom: 1rem;
 }
 
 .program-container {
