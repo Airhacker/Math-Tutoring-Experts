@@ -15,9 +15,3 @@ links.forEach(link => {
     burger.classList.toggle("toggle");
   });
 });
-
-// GSAP Animation for student
-
-// Head Animation
-
-// GSAP Animation for Space

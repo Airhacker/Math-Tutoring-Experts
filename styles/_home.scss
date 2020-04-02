@@ -29,6 +29,7 @@
   display: block;
   cursor: pointer;
   margin: 1rem;
+  z-index: 9;
 
   span {
     padding: 0.2rem 2rem;
@@ -47,6 +48,7 @@
   top: 0%;
   left: 100%;
   transition: transform 1s ease;
+  z-index: 3;
 
   @include flex(column, center, space-evenly);
 
@@ -80,12 +82,16 @@
 
 // Main Section
 
+#main-page {
+  z-index: 0;
+}
 // Box Image
 
 .box-image {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: -1;
 }
 
 // Space Image
@@ -95,8 +101,6 @@
   bottom: 0;
   right: 0;
   display: none;
-  svg {
-  }
 }
 
 .home-main {
@@ -140,10 +144,6 @@
   margin: 2rem;
 }
 
-.arrow {
-  width: 50px;
-}
-
 // Head Animations
 #head {
   animation: boxAnimation 1s linear alternate infinite;
@@ -171,5 +171,30 @@
   }
   to {
     transform: rotateZ(-5deg);
+  }
+}
+
+// For Tablet
+
+@media screen and (min-width: 700px) {
+  .home-logo {
+    img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  .home-footer {
+    button {
+      font-size: 2.5rem;
+    }
+  }
+
+  .box-image {
+    right: 15%;
+    svg {
+      width: 150%;
+      height: 150%;
+    }
   }
 }

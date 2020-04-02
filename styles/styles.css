@@ -44,6 +44,24 @@ p {
   font-size: var(--text);
 }
 
+@media screen and (min-width: 700px) {
+  body h1 {
+    font-size: calc(6rem + 1vw);
+  }
+  body h2 {
+    font-size: calc(4rem + 1vw);
+  }
+  body h3 {
+    font-size: calc(3rem + 1vw);
+  }
+  body h4 {
+    font-size: calc(1rem + 1vw);
+  }
+  body p {
+    font-size: calc(2rem + 1vw);
+  }
+}
+
 .home-header {
   background: white;
   min-height: 7vh;
@@ -100,6 +118,7 @@ p {
   display: block;
   cursor: pointer;
   margin: 1rem;
+  z-index: 9;
 }
 
 .burger span {
@@ -123,6 +142,7 @@ p {
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,10 +191,15 @@ p {
   background: whitesmoke;
 }
 
+#main-page {
+  z-index: 0;
+}
+
 .box-image {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: -1;
 }
 
 .space-image {
@@ -259,10 +284,6 @@ p {
   margin: 2rem;
 }
 
-.arrow {
-  width: 50px;
-}
-
 #head {
   -webkit-animation: boxAnimation 1s linear alternate infinite;
           animation: boxAnimation 1s linear alternate infinite;
@@ -316,6 +337,23 @@ p {
   to {
     -webkit-transform: rotateZ(-5deg);
             transform: rotateZ(-5deg);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .home-logo img {
+    width: 60%;
+    height: 60%;
+  }
+  .home-footer button {
+    font-size: 2.5rem;
+  }
+  .box-image {
+    right: 15%;
+  }
+  .box-image svg {
+    width: 150%;
+    height: 150%;
   }
 }
 
@@ -394,6 +432,15 @@ p {
 .about-cards-description span {
   font-size: var(--text);
   font-weight: bold;
+}
+
+@media screen and (min-width: 700px) {
+  .about-cards-description p {
+    font-size: calc(2rem + 1vw);
+  }
+  .about-cards-description span {
+    font-size: calc(2rem + 1vw);
+  }
 }
 
 #programs-page {
@@ -558,6 +605,8 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contact-info {
@@ -584,6 +633,56 @@ p {
   margin: 1rem 0rem;
 }
 
+.contact-desc-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-desc-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.address,
+.phone,
+.mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -598,6 +697,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .contact-form form {
@@ -618,7 +718,8 @@ p {
 }
 
 .contact-form form input {
-  padding: 1rem 2rem;
+  width: 100%;
+  padding: 1rem 0rem;
   margin: 0.5rem 0rem;
   border: none;
   border-bottom: 2px solid #b8100a;
@@ -633,14 +734,33 @@ p {
   margin: 0.5rem 0rem;
 }
 
+.contact-form form .selection-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .contact-form form select {
-  padding: 1rem 3rem;
+  width: 100%;
+  padding: 1rem 0rem;
   margin: 0.5rem 0rem;
   border: none;
   border-bottom: 2px solid #b8100a;
 }
 
 .contact-form form textarea {
+  width: 100%;
   margin: 0.5rem 0rem;
   border: none;
   padding: 1rem 0rem;
@@ -657,5 +777,20 @@ p {
   font-size: var(--text);
   font-weight: bold;
   letter-spacing: 0.1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .contact-desc-2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

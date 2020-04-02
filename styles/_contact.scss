@@ -12,6 +12,7 @@
 
 .contact-container {
   @include flex(column, center, center);
+  flex-wrap: wrap;
 }
 
 .contact-info {
@@ -26,15 +27,31 @@
   }
 }
 
+.contact-desc-1 {
+  @include flex(row, center, center);
+}
+
+.contact-desc-2 {
+  @include flex(column, center, center);
+}
+
+.address,
+.phone,
+.mail {
+  @include flex(column, center, center);
+}
+
 .contact-form {
   @include flex(column, center, center);
+  width: 100%;
 
   form {
     width: 100%;
     @include flex(column, center, center);
 
     input {
-      padding: 1rem 2rem;
+      width: 100%;
+      padding: 1rem 0rem;
       margin: 0.5rem 0rem;
       border: none;
       border-bottom: 2px solid $main-color;
@@ -47,14 +64,22 @@
     label {
       margin: 0.5rem 0rem;
     }
+
+    .selection-box {
+      width: 100%;
+      @include flex(column, center, center);
+    }
+
     select {
-      padding: 1rem 3rem;
+      width: 100%;
+      padding: 1rem 0rem;
       margin: 0.5rem 0rem;
       border: none;
       border-bottom: 2px solid $main-color;
     }
 
     textarea {
+      width: 100%;
       margin: 0.5rem 0rem;
       border: none;
       padding: 1rem 0rem;
@@ -73,4 +98,15 @@
   font-size: var(--text);
   font-weight: bold;
   letter-spacing: 0.1rem;
+}
+
+// For Tablet
+
+@media screen and (min-width: 700px) {
+  .contact-desc-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+  }
 }
