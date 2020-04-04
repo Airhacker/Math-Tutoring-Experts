@@ -124,6 +124,10 @@
   h1 {
     margin: 2rem 0rem;
   }
+
+  h3 {
+    color: $text-color;
+  }
 }
 
 // Footer
@@ -196,5 +200,106 @@
       width: 150%;
       height: 150%;
     }
+  }
+}
+
+// For Desktop
+@media screen and (min-width: 1200px) {
+  // Nav Section
+
+  .home-header {
+    min-height: 10vh;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25),
+      0px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .burger {
+    display: none;
+    pointer-events: none;
+  }
+
+  .menu-right {
+    flex: 3 1 20rem;
+    @include flex(row, center, center);
+
+    // Removing elements from nav
+    li {
+      &:nth-child(1) {
+        display: none;
+      }
+    }
+
+    .nav-links {
+      position: initial;
+
+      width: 100%;
+      height: 100%;
+      background: white;
+
+      z-index: 3;
+
+      @include flex(row, center, space-around);
+    }
+
+    a {
+      font-size: var(--text);
+      font-weight: normal;
+      color: black;
+
+      &:hover {
+        border-bottom: 5px solid $main-color;
+      }
+    }
+  }
+
+  // Main Section
+
+  #main-page {
+    z-index: 0;
+  }
+  // Box Image
+
+  .box-image {
+    display: none;
+  }
+
+  // Space Image
+  .space-image {
+    @include flex(row, center, center);
+    position: initial;
+    flex: 1 1 40rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-main {
+    min-height: 55vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+
+    position: relative;
+  }
+
+  .home-hero-section {
+    @include flex(row, center, center);
+  }
+
+  .home-description {
+    @include flex(column, flex-start, center);
+    height: 100%;
+    margin: 3rem 0rem;
+    flex: 1 1 40rem;
+
+    h3 {
+      font-weight: normal;
+    }
+  }
+
+  .home-footer {
+    width: 90%;
+    margin: auto;
+    align-items: flex-start;
   }
 }

@@ -1,6 +1,7 @@
 // Variables
 $main-color: #b8100a;
 $special-color: #1865f2;
+$text-color: #535353;
 
 //Mixins
 @mixin flex($direction, $align, $justify) {
@@ -17,3 +18,4 @@ $special-color: #1865f2;
 @import "programs";
 @import "coupons";
 @import "contact";
+@import "lastFooter";

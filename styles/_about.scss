@@ -60,3 +60,41 @@
     }
   }
 }
+
+// For Desktop
+
+@media screen and (min-width: 1200px) {
+  #about-page {
+    h2 {
+      margin: 5rem;
+    }
+  }
+  .about-cards {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .about-cards-image {
+    flex: 1 1 30rem;
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+
+  .about-cards-description {
+    flex: 1 1 30rem;
+    height: 100%;
+    margin: 0;
+    @include flex(row, center, center);
+    padding: 0rem 2rem;
+  }
+
+  .second-image {
+    order: 2;
+  }
+
+  .fourth-image {
+    order: 2;
+  }
+}
